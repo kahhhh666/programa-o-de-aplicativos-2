@@ -1,0 +1,21 @@
+{
+    "produtos": [
+        {
+            "nome":"Alexa",
+            "valor":100,
+            "nomeDaImagem": "imagem1.jpg"
+        },
+
+        {
+            "nome":"Relógio Smart Digital",
+            "valor":1500,
+            "nomeDaImagem": "imagem2.jpg"
+        },
+
+        {
+            "nome":"JBL Aprova D'agua",
+            "valor":1500,
+            "nomeDaImagem": "imagem4.webp"
+        }
+    ]
+}

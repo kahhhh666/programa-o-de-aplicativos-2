@@ -1,0 +1,38 @@
+{
+
+    "produtos":[
+       
+        {
+            "nome":"TV 80 Polegadas",
+            "valor":222,
+            "nomeDaImagem": "tv.png"
+            
+        },
+        {
+            "nome":"P5 Slim",
+            "valor":1800,
+            "nomeDaImagem": "ps5.png"
+            
+        },
+        {
+            "nome":"Joystick Ps 360",
+            "valor":200,
+            "nomeDaImagem": "joystick.png"
+            
+        }
+            
+    ],
+
+        "usuarios":[
+            {
+                "username":"dan",
+                "password":"857858"
+            },
+            
+            {
+                "username":"admin",
+                "password":"0998978"
+            }
+        ]
+    
+    }
