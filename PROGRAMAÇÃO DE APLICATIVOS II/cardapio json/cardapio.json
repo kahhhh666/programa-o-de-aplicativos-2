@@ -1,0 +1,29 @@
+{
+    "entradas": [
+    {
+      "nome": "Bruschetta",
+      "descricao": "Pão italiano com tomate, manjericão e azeite.",
+      "preco": 12.5,
+      "ingredientes": ["pão italiano", "tomate", "manjericão", "azeite"],
+      "acompanhamentos": []
+    }
+  ],
+  "pratos_principais": [
+    {
+      "nome": "Filé ao molho madeira",
+      "descricao": "Filé mignon com molho madeira e arroz à grega.",
+      "preco": 39.9,
+      "ingredientes": ["filé mignon", "molho madeira", "arroz", "passas", "cenoura", "ervilha"],
+      "acompanhamentos": ["batata frita", "salada verde"]
+    }
+  ],
+  "sobremesas": [
+    {
+      "nome": "Petit Gâteau",
+      "descricao": "Bolo quente de chocolate com sorvete de baunilha.",
+      "preco": 18.0,
+      "ingredientes": ["chocolate", "farinha", "açúcar", "ovos", "sorvete de baunilha"],
+      "acompanhamentos": []
+    }
+  ]
+}
