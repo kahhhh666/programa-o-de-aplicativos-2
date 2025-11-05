@@ -1,0 +1,42 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="url(#gradient1)" />
+  
+  <!-- Gradient definition -->
+  <defs>
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Byte symbol - Binary style with shopping bag -->
+  <g transform="translate(100, 90)">
+    <!-- Shopping bag outline -->
+    <path d="M -30 -10 L -35 25 Q -35 30 -30 30 L 30 30 Q 35 30 35 25 L 30 -10 Z" 
+          fill="white" stroke="none" />
+    
+    <!-- Bag handle -->
+    <path d="M -15 -10 Q -15 -25 0 -25 Q 15 -25 15 -10" 
+          fill="none" stroke="white" stroke-width="3" stroke-linecap="round" />
+    
+    <!-- Binary code inside bag -->
+    <text x="-22" y="10" font-family="monospace" font-size="14" font-weight="bold" fill="url(#gradient1)">1</text>
+    <text x="-8" y="10" font-family="monospace" font-size="14" font-weight="bold" fill="url(#gradient1)">0</text>
+    <text x="6" y="10" font-family="monospace" font-size="14" font-weight="bold" fill="url(#gradient1)">1</text>
+    <text x="20" y="10" font-family="monospace" font-size="14" font-weight="bold" fill="url(#gradient1)">0</text>
+    
+    <text x="-16" y="24" font-family="monospace" font-size="12" font-weight="bold" fill="url(#gradient1)">1</text>
+    <text x="-2" y="24" font-family="monospace" font-size="12" font-weight="bold" fill="url(#gradient1)">1</text>
+    <text x="12" y="24" font-family="monospace" font-size="12" font-weight="bold" fill="url(#gradient1)">0</text>
+    
+    <!-- Decorative dots -->
+    <circle cx="-40" cy="0" r="3" fill="white" opacity="0.6" />
+    <circle cx="40" cy="5" r="3" fill="white" opacity="0.6" />
+    <circle cx="-38" cy="20" r="2" fill="white" opacity="0.4" />
+    <circle cx="42" cy="25" r="2" fill="white" opacity="0.4" />
+  </g>
+  
+  <!-- Text -->
+  <text x="100" y="165" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="white" text-anchor="middle">ByteShop</text>
+</svg>
