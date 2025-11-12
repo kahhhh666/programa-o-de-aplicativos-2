@@ -1,0 +1,520 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+/* Estilos para a área de busca */
+.search-area {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button#btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    align-self: flex-start; /* Alinha o botão à esquerda */
+}
+
+button#btn:hover {
+    background-color: #218838;
+}
+
+/* Estilos para a área de resultados */
+.results-area {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+h2 {
+    color: #007bff;
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 5px;
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 5px;
+}
+
+p, a {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1em;
+    color: #333;
+}
+
+a#link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a#link:hover {
+    text-decoration: underline;
+}
+
+img#img {
+    max-width: 150px;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Estilos para Responsividade */
+@media (min-width: 600px) {
+    .search-area {
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 20px;
+    }
+
+    .search-area label {
+        flex-grow: 1;
+    }
+
+    .search-area input[type="text"] {
+        flex-grow: 3;
+    }
+
+    button#btn {
+        align-self: auto;
+    }
+
+    .results-area {
+        grid-template-columns: 1fr 2fr; /* Imagem à esquerda, detalhes à direita */
+    }
+
+    /* Ajuste para a imagem no layout de grid */
+    .results-area > h2:nth-of-type(6) { /* "Imagem do livro" */
+        grid-column: 1 / 2;
+    }
+    
+    .results-area > img#img {
+        grid-column: 1 / 2;
+        grid-row: 7 / 10; /* Ocupa o espaço vertical necessário */
+    }
+
+    /* Agrupando os detalhes do livro na segunda coluna */
+    .results-area > h2:not(:nth-of-type(6)),
+    .results-area > p:not(:nth-of-type(5)),
+    .results-area > a#link {
+        grid-column: 2 / 3;
+    }
+}
+
+/* Como não posso alterar o HTML, vou usar o seletor body > * para aplicar o container de forma indireta */
+body > * {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+body {
+    padding: 20px 0;
+}
+
+/* Reajustando para simular o container sem alterar o HTML */
+body {
+    background-color: #f4f4f9;
+    padding: 20px;
+}
+
+/* Estilizando o bloco principal de conteúdo */
+body > h1,
+body > label,
+body > input,
+body > button,
+body > h2,
+body > p,
+body > img,
+body > a {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Agrupando elementos de busca para melhor layout */
+/* Como não posso adicionar uma div, vou usar o flexbox no body e reverter para o fluxo normal */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilizando a área de busca */
+label[for="livro"], input#livro, button#btn {
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 600px) {
+    /* Tentativa de agrupar input e button na mesma linha */
+    body {
+        align-items: flex-start;
+    }
+
+    label[for="livro"] {
+        width: auto;
+        margin-right: 10px;
+    }
+
+    input#livro {
+        flex-grow: 1;
+        margin-right: 10px;
+    }
+
+    button#btn {
+        width: auto;
+    }
+
+    /* Como não posso usar um container flexível para a busca, vou manter o layout de bloco simples para garantir a compatibilidade sem alterar o HTML */
+    /* Removendo as regras de media query que dependem de um container flexível na área de busca */
+    label[for="livro"], input#livro, button#btn {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Estilos Finais e Limpos */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    background-color: #eef2f7;
+    color: #333;
+    line-height: 1.6;
+    display: block; /* Volta para o fluxo normal */
+}
+
+.main-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #1e88e5; /* Azul mais vibrante */
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    font-weight: 300;
+}
+
+/* Estilizando a área de busca */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #1e88e5;
+    outline: none;
+}
+
+button#btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #4caf50; /* Verde */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.1s;
+}
+
+button#btn:hover {
+    background-color: #43a047;
+}
+
+button#btn:active {
+    transform: scale(0.99);
+}
+
+/* Estilizando a área de resultados */
+.result-section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+h2 {
+    color: #1e88e5;
+    font-size: 1.4em;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #1e88e5;
+    border-radius: 4px;
+}
+
+p#desc {
+    font-style: italic;
+    line-height: 1.8;
+    border-left-color: #ff9800; /* Laranja para a descrição */
+}
+
+a#link {
+    display: inline-block;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color 0.3s;
+}
+
+a#link:hover {
+    border-bottom-color: #007bff;
+}
+
+img#img {
+    display: block;
+    max-width: 150px;
+    height: auto;
+    margin: 15px 0 30px 0;
+    border: 5px solid #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsividade: Centralizando o conteúdo principal */
+body > * {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+/* Adicionando um pseudo-container para o conteúdo principal */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #eef2f7;
+    z-index: -1;
+}
+
+/* Ajustando o layout para telas maiores */
+@media (min-width: 768px) {
+    /* Tentativa de alinhar a imagem e os detalhes lado a lado */
+    /* Como não posso adicionar um container, vou usar o grid no body e forçar o alinhamento */
+    /* Isso é arriscado, mas é a única forma sem alterar o HTML */
+    
+    /* Vamos manter o layout de bloco simples para garantir a robustez, pois o HTML não tem containers de resultados */
+    /* O foco será na estética e na usabilidade em bloco */
+}
+
+/* Estilizando o bloco principal de conteúdo para simular o container */
+body > h1,
+body > label,
+body > input,
+body > button,
+body > h2,
+body > p,
+body > img,
+body > a {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+/* Estilizando o bloco principal de conteúdo para simular o container */
+body > h1,
+body > label,
+body > input,
+body > button,
+body > h2,
+body > p,
+body > img,
+body > a {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+/* Adicionando um fundo branco para o conteúdo principal */
+body {
+    background-color: #eef2f7;
+}
+
+body > * {
+    background-color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Removendo o padding extra e ajustando margens para o container simulado */
+body > h1 {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    box-shadow: none;
+    border-radius: 0;
+    background-color: transparent;
+    color: #1e88e5;
+}
+
+/* Estilizando a área de busca como um bloco único */
+label[for="livro"], input#livro, button#btn {
+    background-color: #f9f9f9;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+/* Removendo o fundo e sombra dos elementos internos da busca */
+label[for="livro"], input#livro, button#btn {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+/* Ajustando o input para preencher o espaço */
+input#livro {
+    margin-bottom: 20px;
+}
+
+/* Ajustando a imagem para ter seu próprio bloco de fundo */
+img#img {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+img#img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Ajustando o link para ter seu próprio bloco de fundo */
+a#link {
+    background-color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+}
+
+/* Removendo o fundo e sombra dos h2 e p para um visual mais limpo */
+body > h2, body > p {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+p {
+    padding: 10px 0;
+    border-left: none;
+    background-color: transparent;
+}
+
+p#desc {
+    font-style: normal;
+    padding: 10px;
+    background-color: #f0f8ff; /* Fundo levemente azulado para a descrição */
+    border-left: 4px solid #1e88e5;
+    border-radius: 4px;
+}
+
+/* Finalizando o CSS */
+/* Como não posso alterar o HTML, o uso de seletores diretos no body é a melhor abordagem para simular um container e aplicar estilos de forma isolada e limpa. */
